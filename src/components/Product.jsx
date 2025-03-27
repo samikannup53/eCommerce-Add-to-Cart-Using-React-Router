@@ -1,14 +1,19 @@
-import React from "react";
-
 const Product = ({ product, cart, setCart }) => {
   const title =
     product.title.length > 41
       ? product.title.substring(0, 40) + "..."
       : product.title;
 
+  const isInCart = cart.some((item) => item.id === product.id);
+
   const addCart = () => {
-    setCart([...cart, product]);
+    if (isInCart) {
+      return;
+    } else {
+      setCart([...cart, product]);
+    }
   };
+
   return (
     <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%]  bg-white p-4 flex flex-col">
       <div className="w-full h-50 flex justify-center">
@@ -25,8 +30,15 @@ const Product = ({ product, cart, setCart }) => {
         </p>
         <button
           onClick={addCart}
-          className="text-sm bg-[#fb641b] px-5 py-2 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer mt-auto">
-          <i class="fa-solid fa-cart-shopping"></i> &nbsp; ADD TO CART
+          className={`text-sm  px-5 py-2 rounded-sm  font-semibold   mt-auto
+            ${
+              isInCart
+                ? "bg-sky-500/60 cursor-not-allowed text-gray-700"
+                : "bg-[#fb641b] hover:bg-[#2455f4] cursor-pointer text-white"
+            }`}
+        >
+          <i class="fa-solid fa-cart-shopping"></i> &nbsp;
+          {isInCart ? "ALREADY IN CART" : "ADD TO CART"}
         </button>
       </div>
     </div>
