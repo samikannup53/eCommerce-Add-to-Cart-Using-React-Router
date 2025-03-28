@@ -119,26 +119,26 @@ const Cart = ({ cart, setCart }) => {
                       </div>
                     </div>
                     <div className="flex items-center gap-6">
-                      <div className="flex items-center gap-2"> 
-                      <button
-                        onClick={() => {
-                          handleDecrement(product.id);
-                        }}
-                        className=" text-[1rem] cursor-pointer hover:text-[#2455f4] border-[1px] hover:border-[#2455f4] rounded-full px-[10px] pt-[1px]  "
-                      >
-                        -
-                      </button>
-                      <span className="text-[1rem] font-medium border-[1px] w-8 text-center">
-                        {product.quantity}
-                      </span>
-                      <button
-                        onClick={() => {
-                          handleIncrement(product.id);
-                        }}
-                        className=" text-[1rem] cursor-pointer hover:text-[#2455f4] border-[1px] hover:border-[#2455f4] rounded-full px-2 pt-[1px] "
-                      >
-                        +
-                      </button>
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => {
+                            handleDecrement(product.id);
+                          }}
+                          className=" text-[1rem] cursor-pointer hover:text-[#2455f4] border-[1px] hover:border-[#2455f4] rounded-full px-[10px] pt-[1px]  "
+                        >
+                          -
+                        </button>
+                        <span className="text-[1rem] font-medium border-[1px] w-8 text-center">
+                          {product.quantity}
+                        </span>
+                        <button
+                          onClick={() => {
+                            handleIncrement(product.id);
+                          }}
+                          className=" text-[1rem] cursor-pointer hover:text-[#2455f4] border-[1px] hover:border-[#2455f4] rounded-full px-2 pt-[1px] "
+                        >
+                          +
+                        </button>
                       </div>
                       <button
                         onClick={() => {
