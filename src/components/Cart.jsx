@@ -1,3 +1,6 @@
+import emptyCartImage from "../assets/emptyCartImage.png";
+import shield from "../assets/shield.png";
+
 const Cart = ({ cart, setCart }) => {
   const totalPrice = cart
     .reduce((value, index) => value + index.price * index.quantity, 0)
@@ -36,7 +39,7 @@ const Cart = ({ cart, setCart }) => {
         <h2 className="text-xl font-bold pb-4">Cart Items</h2>
         {cart.length === 0 ? (
           <div className="flex flex-col justify-center items-center">
-            <img src="src\assets\empty-cart-image.png" className="w-58 mr-10" />
+            <img src={emptyCartImage} className="w-58 mr-10" />
             <p className="text-xl mt-4">Your Cart is Empty!</p>
             <p className="text-sm -mt-0">Add Items to it Now.</p>
             <button className="text-sm bg-[#fb641b] px-5 py-2 mt-6 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer">
@@ -75,7 +78,7 @@ const Cart = ({ cart, setCart }) => {
                 </p>
               </div>
               <div className="p-4 flex items-center gap-2">
-                <img src="src/assets/shield.png" className="w-8" />
+                <img src={shield} className="w-8" />
                 <p className="text-gray-500">
                   Safe and Secure Payments.
                   <br /> Easy Returns 100% Authentic Products.
