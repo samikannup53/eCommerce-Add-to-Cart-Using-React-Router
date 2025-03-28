@@ -3,11 +3,6 @@ const Product = ({ product, cart, setCart }) => {
     product.title.length > 41
       ? product.title.substring(0, 40) + "..."
       : product.title;
-  
-  const description =
-    product.description.length > 61
-      ? product.description.substring(0, 60) + "..."
-      : product.description;
 
   const description =
     product.description.length > 61
