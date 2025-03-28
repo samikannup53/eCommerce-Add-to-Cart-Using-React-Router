@@ -11,7 +11,7 @@ const Cart = ({ cart, setCart }) => {
   };
 
   return (
-    <section className="container mx-auto min-h-[calc(100vh-304px)]">
+    <section className="container mx-auto min-h-[75vh]">
       <div className="">
         <h2 className="text-xl font-bold my-8">Cart Items</h2>
         {cart.length === 0 ? (

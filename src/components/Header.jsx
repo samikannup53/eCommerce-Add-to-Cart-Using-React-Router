@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom"
 
-const Header = () => {
+const Header = ({cart}) => {
   return (
     <header className="bg-[#2874f0] sticky top-0 p-6">
       <nav className="container mx-auto flex items-center justify-between">
@@ -14,7 +14,14 @@ const Header = () => {
           <li> <Link to="/products">Products</Link> </li>
           <li> <Link to="/about">About Us</Link> </li>
           <li> <Link to="/contact">Contact Us</Link> </li>
-          <li> <Link to="/cart">Cart</Link> </li>
+          <li> 
+            <Link to="/cart" className="relative"> 
+            <span className="absolute text-sm bg-[#fb641b] rounded-full px-[6px] font-semibold -top-2 left-3 text-white border-1">
+              {cart.length}
+            </span>
+            <span> <i class="fa-solid fa-cart-shopping"></i> &nbsp; Cart </span>
+          </Link> 
+          </li>
         </ul>
       </nav>
     </header>
