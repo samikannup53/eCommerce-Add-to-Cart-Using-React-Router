@@ -4,13 +4,18 @@ const Product = ({ product, cart, setCart }) => {
       ? product.title.substring(0, 40) + "..."
       : product.title;
 
-  const isInCart = cart.some((item) => item.id === product.id);
+  const description =
+    product.description.length > 61
+      ? product.description.substring(0, 60) + "..."
+      : product.description;
+
+  const isInCart = cart.find((item) => item.id === product.id);
 
   const addCart = () => {
     if (isInCart) {
       return;
     } else {
-      setCart([...cart, product]);
+      setCart([...cart, { ...product, quantity: 1 }]);
     }
   };
 
@@ -24,7 +29,10 @@ const Product = ({ product, cart, setCart }) => {
         />
       </div>
       <div className="flex flex-col items-center flex-grow text-center space-y-3 mt-3">
-        <h1 className="font-semibold text-[17px] text-gray-900">{title}</h1>
+        <h1 className="font-semibold text-[17px] text-gray-700 capitalize">
+          {title}
+        </h1>
+        <p className="taxt-[14px] text-gray-500 capitalize">{description}</p>
         <p className="text-lg font-bold text-[19px] text-gray-800">
           ₹ &nbsp;{product.price}
         </p>
