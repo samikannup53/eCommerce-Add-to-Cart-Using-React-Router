@@ -5,11 +5,11 @@ body {
 }
 
 .footer-navlink {
-  @apply text-white text-base hover:text-blue-600 cursor-pointer;
+  @apply text-white text-[14px] hover:text-blue-600 cursor-pointer;
 }
 
 .footer-navlink-title {
-  @apply text-white text-lg mb-4 cursor-default;
+  @apply text-white text-[17px] mb-4 cursor-default;
 }
 
 .social-icons {

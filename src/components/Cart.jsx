@@ -1,7 +1,7 @@
 import emptyCartImage from "../assets/emptyCartImage.png";
 import shield from "../assets/shield.png";
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart, setCart, product }) => {
   const totalPrice = cart
     .reduce((value, index) => value + index.price * index.quantity, 0)
     .toFixed(2);
@@ -47,8 +47,8 @@ const Cart = ({ cart, setCart }) => {
             </button>
           </div>
         ) : (
-          <div className="pb-6 gap-4 flex flex-row-reverse justify-between items-start">
-            <div className=" flex-1/4 sticky top-[148px]">
+          <div className="pb-6 gap-4 flex flex-col-reverse sm:flex-row-reverse justify-between items-start">
+            <div className=" flex-1/4 sm:sticky sm:top-[148px]">
               <div className="flex flex-col gap-6 bg-white shadow-md rounded-sm">
                 <p className="border-b-[1px] border-gray-300 py-4 px-6 text-gray-500 font-semibold">
                   PRICE DETAILS
@@ -93,27 +93,42 @@ const Cart = ({ cart, setCart }) => {
                     key={product.id}
                     className="flex flex-col gap-10 p-12 shadow-sm"
                   >
-                    <div className="flex flex-col sm:flex-row items-start gap-4">
-                      <div className="w-30 h-30 flex items-center">
-                        <img
-                          src={product.image}
-                          alt={product.title}
-                          className="w-24"
-                        />
-                      </div>
-                      <div>
-                        <p className="w-full text-[1rem] text-center sm:text-left sm:w-70 lg:w-100">
-                          {product.title}
-                        </p>
-                        <p className="text-center text-[18px] sm:text-left text-gray-700 font-semibold py-3 sm:py-0">
-                          ₹&nbsp;{product.price}
-                        </p>
-                        <p className="text-center text-[18px] sm:text-left text-gray-700 font-semibold py-3 sm:py-0">
-                          {product.quantity} Item Price : ₹&nbsp;
-                          {(product.price * product.quantity).toFixed(2)}
-                        </p>
-                      </div>
-                      <div className="ml-auto text-gray-500 ">
+                    <div className="flex items-center gap-4">
+                      <div className="flex flex-col sm:flex-row">
+                        <div className="flex gap-4">
+                          <div className="w-30 h-30 flex items-center">
+                            <img
+                              src={product.image}
+                              alt={product.title}
+                              className="w-24"
+                            />
+                          </div>
+                          <div className="">
+                            <p className="w-full text-[1rem]sm:w-70 lg:w-100">
+                              {product.title}
+                            </p>
+                            <div className="flex items-center gap-2">
+                              <p className="line-through strick-linethrough text-[1rem]/0 text-gray-700 font-semibold py-3 sm:py-0">
+                                ₹&nbsp;{product.price}
+                              </p>
+                              <span className="text-green-700 ml-2">
+                                10% Off
+                              </span>
+                            </div>
+                            <p className="strick-linethrough text-[18px]/0 sm:text-[18px]/6 text-gray-700 font-semibold py-3 sm:py-0">
+                              ₹&nbsp;
+                              {(
+                                product.price -
+                                (product.price * 10) / 100
+                              ).toFixed(2)}
+                            </p>
+                            <p className="text-[1rem]  text-gray-700 py-3 sm:py-0">
+                              {product.quantity} Quandity Price : ₹&nbsp;
+                              {((product.price * product.quantity)*90/100).toFixed(2)}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="ml-auto text-gray-500 "></div>
                         <p>
                           Delivery By Tomorrow |{" "}
                           <span className="line-through ml-auto">₹ 50</span>
@@ -121,7 +136,7 @@ const Cart = ({ cart, setCart }) => {
                         </p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center justify-center sm:justify-start gap-6">
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => {
