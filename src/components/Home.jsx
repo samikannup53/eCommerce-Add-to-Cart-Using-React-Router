@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import heroImage from "../assets/heroImage.png";
 
 const Home = () => {
@@ -15,9 +16,13 @@ const Home = () => {
           <p className="text-xl font-semibold text-center sm:text-left">
             We Make Online Shopping Superbly Easy
           </p>
-          <button class="text-xl bg-[#fb641b] px-8 py-4 rounded-full hover:bg-[#2455f4] font-semibold text-white cursor-pointer mt-8">
+
+          <Link
+            className="text-xl bg-[#fb641b] px-8 py-4 rounded-full hover:bg-[#2455f4] font-semibold text-white cursor-pointer mt-8"
+            to="/products"
+          >
             Shope Now
-          </button>
+          </Link>
         </div>
         <div>
           <img

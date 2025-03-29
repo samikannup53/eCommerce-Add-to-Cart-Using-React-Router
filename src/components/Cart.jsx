@@ -1,7 +1,8 @@
 import emptyCartImage from "../assets/emptyCartImage.png";
 import shield from "../assets/shield.png";
+import { Link } from "react-router-dom";
 
-const Cart = ({ cart, setCart, product }) => {
+const Cart = ({ cart, setCart}) => {
   const totalPrice = cart
     .reduce((value, index) => value + index.price * index.quantity, 0)
     .toFixed(2);
@@ -36,15 +37,21 @@ const Cart = ({ cart, setCart, product }) => {
   return (
     <section className=" min-h-[75vh] bg-[#EFF7F6] p-6">
       <div className="container mx-auto">
-        <h2 className="px-2 py-1 inline bg-gray-200 rounded-sm shadow-2xl text-gray-600 font-semibold uppercase"> Your Cart</h2>
+        <h2 className="px-2 py-1 inline bg-gray-200 rounded-sm shadow-2xl text-gray-600 font-semibold uppercase">
+          Your Cart
+        </h2>
         {cart.length === 0 ? (
           <div className="flex flex-col justify-center items-center">
-            <img src={emptyCartImage} className="w-58 mr-10" />
+            <img src={emptyCartImage} className="w-58 mr-10 mt-8" />
             <p className="text-xl mt-4">Your Cart is Empty!</p>
             <p className="text-sm -mt-0">Add Items to it Now.</p>
-            <button className="text-sm bg-[#fb641b] px-5 py-2 mt-6 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer">
+
+            <Link
+              className="text-sm bg-[#fb641b] px-5 py-2 mt-6 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
+              to="/products"
+            >
               <i class="fa-solid fa-cart-shopping"></i> &nbsp; SHOPE NOW
-            </button>
+            </Link>
           </div>
         ) : (
           <div className="pb-6 gap-4 flex flex-col-reverse sm:flex-row-reverse justify-between items-start">
