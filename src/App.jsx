@@ -2,7 +2,6 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,7 +21,6 @@ function App() {
             element={<Products cart={cart} setCart={setCart} />}
           ></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
           <Route
             path="/cart"
             element={<Cart cart={cart} setCart={setCart} />}

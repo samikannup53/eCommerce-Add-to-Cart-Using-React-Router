@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
-body{
-    font-family: "Poppins",serif;
+body {
+  font-family: "Poppins", serif;
+}
+
+.footer-navlink {
+  @apply text-white text-base hover:text-blue-600 cursor-pointer;
+}
+
+.footer-navlink-title {
+  @apply text-white text-lg mb-4 cursor-default;
+}
+
+.social-icons {
+  @apply w-10 p-1 border-2 border-white rounded-full bg-white 
+    hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-1000;
 }

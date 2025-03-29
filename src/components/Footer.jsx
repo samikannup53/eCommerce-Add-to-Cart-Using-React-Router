@@ -1,51 +1,84 @@
-import React from 'react'
+import instagram from "../assets/instagram.svg"
+import whatsapp from "../assets/whatsapp.svg"
+import twitter from "../assets/twitter.svg"
+import youtube from "../assets/youtube.svg"
+
 
 const Footer = () => {
   return (
-    <footer class="bg-[#172337] p-6">
-      <div className="container mx-auto flex justify-between">
-        <div className="flex gap-2 items-center">
-          <img src="./logo-white.svg" alt="logo" className="w-8" />
-          <h1 className="text-white font-semibold text-lg">ShoppyCart</h1>
+    <footer className="bg-[#172337] p-4">
+      <div className="container mx-auto p-8 sm:p-4 flex flex-col-reverse lg:flex-row justify-between gap-y-10">
+        <div className="w-full lg:w-1/3 flex flex-col gap-4 items-center lg:items-start text-white">
+          <h3 className="text-xl cursor-default">Connect</h3>
+          <div className="flex items-center gap-2">
+            <img src="./logo-white.svg" alt="logo" className="w-8" />
+            <h1 className="font-semibold text-lg">ShoppyCart</h1>
+          </div>
+          <p className="w-[95%] sm:w-[50%] lg:w-[70%] text-sm text-center sm:text-left cursor-default">
+            Sri Jagannath Nivas,8-1-164/345/A/1, Pragati Colony, Mailardevpally,
+            Nawab Saheb Kunta, Hyd, 500005
+          </p>
         </div>
-        <div className="text-white flex gap-10">
-          <div className="flex-1/4">
-            <h3>Quick Links</h3>
-            <nav className="flex flex-col">
-              <span>Home</span>
-              <span>Products</span>
-              <span>Cart</span>
+
+        <div className="w-full lg:w-1/2 flex flex-wrap justify-between gap-y-10">
+          <div className="w-2/3 sm:w-auto flex flex-col gap-2">
+            <h3 className="footer-navlink-title">Company</h3>
+
+            <nav className="flex flex-col gap-2">
+              <span className="footer-navlink">About Us</span>
+              <span className="footer-navlink">Mission</span>
+              <span className="footer-navlink">Vission</span>
+              <span className="footer-navlink">Contact</span>
             </nav>
           </div>
-          <div className="flex-1/4">
-            <h3>Company</h3>
-            <nav className="flex flex-col">
-              <span>About</span>
-              <span>Privacy & Policy</span>
-              <span>Terms & Conditions</span>
+
+          <div className="w-1/3 sm:w-auto flex flex-col gap-2  ">
+            <h3 className="footer-navlink-title">Quick Links</h3>
+
+            <nav className="flex flex-col gap-2">
+              <span className="footer-navlink">Home</span>
+              <span className="footer-navlink">Products</span>
+              <span className="footer-navlink">Cart</span>
+              <span className="footer-navlink">About US</span>
             </nav>
           </div>
-          <div className="flex-1/4">
-            <h3>Help</h3>
-            <nav className="flex flex-col">
-              <span>Payments</span>
-              <span>Shipping & Policy</span>
-              <span>Cancellation & Returns</span>
-              <span>FAQ</span>
+
+          <div className="w-2/3 sm:w-auto flex flex-col gap-2 sm:-mr-10">
+            <h3 className="footer-navlink-title">Help</h3>
+            <nav className="flex flex-col gap-2">
+              <span className="footer-navlink">Payments</span>
+              <span className="footer-navlink">Shipping</span>
+              <span className="footer-navlink">Cancellation</span>
+              <span className="footer-navlink">Returns</span>
+              <span className="footer-navlink">Refunds</span>
             </nav>
           </div>
-          <div className="flex-1/4">
-            <h3>Contact</h3>
-            <div className="flex flex-col">
-              <span>No.1, ShoppyCart, Corporate Office, India</span>
-              <span>+91-9874561230</span>
-              <span>support@shoppycart.com</span>
-            </div>
+
+          <div className="w-1/3 sm:w-auto flex flex-col gap-2">
+            <h3 className="footer-navlink-title">More</h3>
+
+            <nav className="flex flex-col gap-2">
+              <span className="footer-navlink">Terms</span>
+              <span className="footer-navlink">Privacy</span>
+              <span className="footer-navlink">Contact</span>
+              <span className="footer-navlink">FAQ</span>
+            </nav>
           </div>
         </div>
       </div>
+
+      <div className="flex justify-center gap-4 p-4">
+        <img className="social-icons" src={instagram} />
+        <img className="social-icons" src={whatsapp} />
+        <img className="social-icons" src={twitter} />
+        <img className="social-icons" src={youtube} />
+        
+      </div>
+      <p className="text-center text-xs sm:text-base text-white cursor-default">
+        Copyright @ 2023 AskmeIdentity. All Rights Reserved
+      </p>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;
