@@ -2,6 +2,7 @@ import instagram from "../assets/instagram.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import twitter from "../assets/twitter.svg";
 import youtube from "../assets/youtube.svg";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -9,13 +10,13 @@ const Footer = () => {
       <div className="container mx-auto p-8 sm:p-4 flex flex-col-reverse lg:flex-row justify-between gap-y-10">
         <div className="w-full lg:w-1/3 flex flex-col gap-4 items-center lg:items-start text-white">
           <h3 className="footer-navlink-title">Connect</h3>
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src="./logo-white.svg" alt="logo" className="w-8" />
             <h1 className="font-semibold text-lg">ShoppyCart</h1>
-          </div>
+          </Link>
           <p className="w-[95%] sm:w-[50%] lg:w-[70%] text-sm text-center sm:text-left cursor-default">
-            Krishna Nivas, No. 8-1-164/345/A/1, Pragati Colony, Krishnaraja Pura,
-            Chennai, Tamilnadu , 600 001
+            Krishna Nivas, No. 8-1-164/345/A/1, Pragati Colony, Krishnaraja
+            Pura, Chennai, Tamilnadu , 600 001
           </p>
         </div>
 

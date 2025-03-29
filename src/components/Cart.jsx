@@ -35,7 +35,7 @@ const Cart = ({ cart, setCart}) => {
   };
 
   return (
-    <section className=" min-h-[75vh] bg-[#EFF7F6] p-6">
+    <section className=" min-h-[75vh] bg-[#EFF7F6] p-6 cursor-default">
       <div className="container mx-auto">
         <h2 className="px-2 py-1 inline bg-gray-200 rounded-sm shadow-2xl text-gray-600 font-semibold uppercase">
           Your Cart
@@ -55,8 +55,8 @@ const Cart = ({ cart, setCart}) => {
           </div>
         ) : (
           <div className="pb-6 gap-4 flex flex-col-reverse sm:flex-row-reverse justify-between items-start">
-            <div className=" flex-1/4 sm:sticky sm:top-[128px]">
-              <div className="flex flex-col gap-6 bg-white shadow-md rounded-sm">
+            <div className=" flex-1/2 xl:flex-1/4 sm:sticky sm:top-[128px]">
+              <div className="flex flex-col gap-6 bg-white shadow-xl rounded-sm">
                 <p className="border-b-[1px] border-gray-300 py-4 px-6 text-gray-500 font-semibold">
                   PRICE DETAILS
                 </p>
@@ -86,7 +86,7 @@ const Cart = ({ cart, setCart}) => {
               </div>
               <div className="p-4 flex items-center gap-2">
                 <img src={shield} className="w-8" />
-                <p className="text-gray-500">
+                <p className="text-gray-500 sm:text-[14px] 2xl:text-[1rem]">
                   Safe and Secure Payments.
                   <br /> Easy Returns 100% Authentic Products.
                 </p>
@@ -101,7 +101,7 @@ const Cart = ({ cart, setCart}) => {
                     className="flex flex-col gap-4 p-6 shadow-sm"
                   >
                     <div className="">
-                      <div className="flex flex-col xl:flex-row justify-between">
+                      <div className="flex flex-col xl:flex-row gap-4 justify-between">
                         <div className="flex gap-4">
                           <div className="w-30 h-30 flex items-center">
                             <img
@@ -180,7 +180,7 @@ const Cart = ({ cart, setCart}) => {
                   </div>
                 ))}
               </div>
-              <div className="border-t-[1px] border-gray-300 p-8 flex justify-end sticky bottom-0 bg-white drop-shadow-lg">
+              <div className="border-t-[1px] border-gray-300 p-5 2xl:p-8 flex justify-end sticky bottom-0 bg-white drop-shadow-lg">
                 <button class="text-lg bg-[#fb641b] px-6 py-2 rounded-[6px] hover:bg-[#2455f4] font-medium text-white cursor-pointer">
                   CHECK OUT
                 </button>

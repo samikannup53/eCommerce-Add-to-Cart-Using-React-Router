@@ -20,7 +20,7 @@ const Product = ({ product, cart, setCart }) => {
   };
 
   return (
-    <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%]  bg-white p-4 flex flex-col">
+    <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[23%] rounded-sm bg-white p-4 flex flex-col shadow-sm hover:shadow-2xl cursor-default">
       <div className="w-full h-50 flex justify-center">
         <img
           src={product.image}
