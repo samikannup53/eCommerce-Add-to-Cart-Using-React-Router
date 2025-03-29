@@ -36,7 +36,7 @@ const Cart = ({ cart, setCart, product }) => {
   return (
     <section className=" min-h-[75vh] bg-[#EFF7F6] p-6">
       <div className="container mx-auto">
-        <h2 className="text-xl font-bold pb-4">Cart Items</h2>
+        <h2 className="px-2 py-1 inline bg-gray-200 rounded-sm shadow-2xl text-gray-600 font-semibold uppercase"> Your Cart</h2>
         {cart.length === 0 ? (
           <div className="flex flex-col justify-center items-center">
             <img src={emptyCartImage} className="w-58 mr-10" />
@@ -48,7 +48,7 @@ const Cart = ({ cart, setCart, product }) => {
           </div>
         ) : (
           <div className="pb-6 gap-4 flex flex-col-reverse sm:flex-row-reverse justify-between items-start">
-            <div className=" flex-1/4 sm:sticky sm:top-[148px]">
+            <div className=" flex-1/4 sm:sticky sm:top-[128px]">
               <div className="flex flex-col gap-6 bg-white shadow-md rounded-sm">
                 <p className="border-b-[1px] border-gray-300 py-4 px-6 text-gray-500 font-semibold">
                   PRICE DETAILS
@@ -94,7 +94,7 @@ const Cart = ({ cart, setCart, product }) => {
                     className="flex flex-col gap-4 p-6 shadow-sm"
                   >
                     <div className="">
-                      <div className="flex flex-col sm:flex-row justify-between">
+                      <div className="flex flex-col xl:flex-row justify-between">
                         <div className="flex gap-4">
                           <div className="w-30 h-30 flex items-center">
                             <img
@@ -132,7 +132,7 @@ const Cart = ({ cart, setCart, product }) => {
                           </div>
                         </div>
 
-                        <p className="text-[14px] sm:text-[1rem] text-gray-500 text-center sm:text-right">
+                        <p className="text-[14px] sm:text-[1rem] text-gray-500 text-center sm:text-left 2xl:text-right">
                           Delivery By Tomorrow |
                           <span className="line-through ml-2">₹ 50</span>
                           <span className="text-green-700 ml-2">Free</span>

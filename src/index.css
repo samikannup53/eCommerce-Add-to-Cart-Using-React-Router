@@ -4,6 +4,10 @@ body {
   font-family: "Poppins", serif;
 }
 
+.righteous {
+  font-family: "Righteous", serif;
+}
+
 .footer-navlink {
   @apply text-white text-[14px] hover:text-blue-600 cursor-pointer;
 }
