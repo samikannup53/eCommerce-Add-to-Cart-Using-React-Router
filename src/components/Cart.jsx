@@ -87,14 +87,14 @@ const Cart = ({ cart, setCart, product }) => {
             </div>
 
             <div className="flex-3/4 bg-white shadow-md rounded-sm">
-              <div>
+              <div className="">
                 {cart.map((product) => (
                   <div
                     key={product.id}
-                    className="flex flex-col gap-10 p-12 shadow-sm"
+                    className="flex flex-col gap-4 p-6 shadow-sm"
                   >
-                    <div className="flex items-center gap-4">
-                      <div className="flex flex-col sm:flex-row">
+                    <div className="">
+                      <div className="flex flex-col sm:flex-row justify-between">
                         <div className="flex gap-4">
                           <div className="w-30 h-30 flex items-center">
                             <img
@@ -123,15 +123,18 @@ const Cart = ({ cart, setCart, product }) => {
                               ).toFixed(2)}
                             </p>
                             <p className="text-[1rem]  text-gray-700 py-3 sm:py-0">
-                              {product.quantity} Quandity Price : ₹&nbsp;
-                              {((product.price * product.quantity)*90/100).toFixed(2)}
+                              {product.quantity} Qty Price : ₹&nbsp;
+                              {(
+                                (product.price * product.quantity * 90) /
+                                100
+                              ).toFixed(2)}
                             </p>
                           </div>
                         </div>
-                        <div className="ml-auto text-gray-500 "></div>
-                        <p>
-                          Delivery By Tomorrow |{" "}
-                          <span className="line-through ml-auto">₹ 50</span>
+
+                        <p className="text-[14px] sm:text-[1rem] text-gray-500 text-center sm:text-right">
+                          Delivery By Tomorrow |
+                          <span className="line-through ml-2">₹ 50</span>
                           <span className="text-green-700 ml-2">Free</span>
                         </p>
                       </div>
