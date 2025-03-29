@@ -39,7 +39,7 @@ const Products = ({ cart, setCart }) => {
     );
   } else {
     return (
-      <section className=" bg-[#EFF7F6] p-4 min-h-[75vh]">
+      <section className=" bg-[#EFF7F6] px-4 py-4 sm:py-12 min-h-[75vh]">
         {products.length !== 0 && (
           <div className="container mx-auto flex flex-wrap gap-4 justify-center">
             {products.map((product) => (
