@@ -32,10 +32,11 @@ Optimized for both Desktop and Mobile Devices.
 A clean and user-friendly layout ensures a consistent user experience on various screen sizes.
 
 ## Tech Stack 💫
+- ReactJs
+- React Router
 - HTML
-- Tailwind CSS
-- Javascript
-- React
+- Tailwind CSS for styling
+- JavaScript for Functionality
 
 ## Deployed - URL 🌐 
 Below is the Deployed URL
