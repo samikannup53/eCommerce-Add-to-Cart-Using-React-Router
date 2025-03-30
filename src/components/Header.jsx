@@ -22,7 +22,7 @@ const Header = ({ cart }) => {
             <span className="absolute text-sm bg-[#fb641b] rounded-full px-[6px] font-semibold -top-2 left-3 text-white border-1">
               {cart.length}
             </span>
-            <i class="fa-solid fa-cart-shopping"></i> &nbsp; Cart{" "}
+            <i class="fa-solid fa-cart-shopping"></i> &nbsp; Cart
           </Link>
         </div>
         <div className="flex gap-6 sm:hidden text-white text-xl">

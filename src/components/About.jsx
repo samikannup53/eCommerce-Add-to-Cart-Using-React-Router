@@ -101,7 +101,7 @@ const About = () => {
           <div className="w-40 h-1 bg-[#261FB3] mx-auto mt-2"></div>
           <div className="w-20 h-1 bg-[#fb641b] mx-auto -mt-5"></div>
           <p className="capitalize text-justify sm:text-center text-[#261FB3] font-medium">
-            We believe shopping should be more than just a transaction. It should
+            We believe shopping should be more than just a transaction - It should
             be an experience. Thank you for choosing <span>ShoppyCart</span>.
             We’re excited to serve you!
           </p>
