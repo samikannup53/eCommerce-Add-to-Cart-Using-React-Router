@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { scrollToTop } from "../utilities/scrollToTop";
 
 const About = () => {
   return (
@@ -101,16 +102,17 @@ const About = () => {
           <div className="w-40 h-1 bg-[#261FB3] mx-auto mt-2"></div>
           <div className="w-20 h-1 bg-[#fb641b] mx-auto -mt-5"></div>
           <p className="capitalize text-justify sm:text-center text-[#261FB3] font-medium">
-            We believe shopping should be more than just a transaction - It should
-            be an experience. Thank you for choosing <span>ShoppyCart</span>.
-            We’re excited to serve you!
+            We believe shopping should be more than just a transaction - It
+            should be an experience. Thank you for choosing{" "}
+            <span>ShoppyCart</span>. We’re excited to serve you!
           </p>
         </div>
 
         <div className="flex justify-center mb-10">
           <Link
-            className="uppercase text-lg bg-[#fb641b] px-6 py-3 rounded-full hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
             to="/products"
+            onClick={scrollToTop}
+            className="uppercase text-lg bg-[#fb641b] px-6 py-3 rounded-full hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
           >
             - Continue Shopping -
           </Link>

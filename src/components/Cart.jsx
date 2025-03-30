@@ -1,8 +1,9 @@
 import emptyCartImage from "../assets/emptyCartImage.png";
 import shield from "../assets/shield.png";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../utilities/scrollToTop";
 
-const Cart = ({ cart, setCart}) => {
+const Cart = ({ cart, setCart }) => {
   const totalPrice = cart
     .reduce((value, index) => value + index.price * index.quantity, 0)
     .toFixed(2);
@@ -47,8 +48,9 @@ const Cart = ({ cart, setCart}) => {
             <p className="text-sm -mt-0">Add Items to it Now.</p>
 
             <Link
-              className="text-sm bg-[#fb641b] px-5 py-2 mt-6 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
               to="/products"
+              onClick={scrollToTop}
+              className="text-sm bg-[#fb641b] px-5 py-2 mt-6 rounded-sm hover:bg-[#2455f4] font-semibold text-white cursor-pointer"
             >
               <i class="fa-solid fa-cart-shopping"></i> &nbsp; SHOPE NOW
             </Link>
