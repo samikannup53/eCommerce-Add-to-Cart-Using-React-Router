@@ -6,7 +6,7 @@ import { scrollToTop } from "../utilities/scrollToTop";
 
 const Home = () => {
   return (
-    <section className="p-6 bg-gradient-to-t from-[rgba(217,236,255,2)] to-[rgba(240,243,255,0)] min-h-90vh flex justify-center items-center">
+    <section className="p-6 bg-gradient-to-t from-[rgba(217,236,255,2)] to-[rgba(240,243,255,0)] min-h-[90vh] flex justify-center items-center">
       <div className=" container mx-auto flex flex-col items-center md:gap-6 my-10 cursor-default relative ">
         <h1 className="drop-shadow-lg text-[#fb641b] font-[600] text-2xl sm:text-3xl leading-10 xl:text-[2.5rem] text-center  ">
           Shope <span className="text-[#2455f4]">Outside the Box</span>
