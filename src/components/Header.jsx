@@ -9,7 +9,7 @@ const Header = ({ cart }) => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <header className="bg-[#2874f0] sticky top-0 p-6 z-40">
+    <header className="bg-[#2874f0] sticky top-0 p-4 2xl:p-6 z-40">
       <nav className="container mx-auto flex items-center justify-between">
         <Link
           to="/"
