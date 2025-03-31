@@ -40,7 +40,7 @@ const Cart = ({ cart, setCart }) => {
   };
 
   return (
-    <section className=" min-h-[75vh] bg-[#EFF7F6] p-6 cursor-default">
+    <section className=" min-h-[90vh] bg-[#EFF7F6] p-6 cursor-default">
       <div className="container mx-auto">
         <h2 className="px-2 py-1 inline bg-gray-200 rounded-sm shadow-2xl text-gray-600 font-semibold uppercase">
           Your Cart

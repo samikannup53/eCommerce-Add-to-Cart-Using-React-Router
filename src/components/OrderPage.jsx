@@ -4,8 +4,8 @@ import { scrollToTop } from "../utilities/scrollToTop";
 
 const OrderPage = () => {
   return (
-    <section className="p-6 bg-gradient-to-t from-[rgba(217,236,255,2)] to-[rgba(240,243,255,0)] min-h-[80vh]">
-      <div className="px-4 container mx-auto mt-15 flex flex-col justify-center items-center">
+    <section className="p-6 bg-gradient-to-t from-[rgba(217,236,255,2)] to-[rgba(240,243,255,0)] min-h-[90vh]">
+      <div className="px-4 container mx-auto mt-15 2xl:mt-30 flex flex-col justify-center items-center">
         <img src={success} alt="Order Success" className="w-30 animate-pulse ml-8 sm:ml-0" />
         <p className="text-center mt-4 text-gray-800 font-medium text-[18px]">
           Your Order Has Been Placed Successfully !

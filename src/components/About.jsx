@@ -13,7 +13,7 @@ const About = () => {
         </p>
         <div className="w-20 h-1 bg-[#261FB3] mx-auto mt-2"></div>
 
-        <div className="sm:w-[75vw] mx-auto my-10 flex flex-col gap-8 bg-white text-gray-800 shadow-2xl px-8 sm:px-15 py-12 rounded-xl">
+        <div className="sm:w-[75vw] max-w-[1200px] mx-auto my-10 flex flex-col gap-8 bg-white text-gray-800 shadow-2xl px-8 sm:px-15 py-12 rounded-xl">
           <div>
             <h2 className="uppercase text-base font-semibold text-[#261FB3]">
               About Us
